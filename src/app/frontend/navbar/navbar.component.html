@@ -1,11 +1,11 @@
-<mat-toolbar color="accent">
-    <span>{{ title }}</span>
+<mat-toolbar [ngClass]="{'dark-theme': isDarkTheme | async}" color="primary">
+    <span class="title">{{ title }}</span>
     <span class="example-spacer"></span>
     <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" [matMenuTriggerFor]="menu">
         <mat-icon>more_vert</mat-icon>
       </button>
   </mat-toolbar>
-  <mat-menu #menu="matMenu" class="nav-menu">
+  <mat-menu #menu="matMenu" class="nav-menu mat-app-background">
     <button mat-menu-item  (click)="$event.stopPropagation();">
       <form>
         <mat-icon> account_circle </mat-icon>
@@ -15,15 +15,17 @@
       </form>
       </button>
       <button mat-menu-item (click)="$event.stopPropagation();"> 
-        <mat-icon [ngClass]="{'dark-theme': isDarkTheme | async}"> {{ themeIcon }} </mat-icon>
+        <mat-icon> {{ themeIcon }} </mat-icon>
         <span>Theme</span>
         <mat-slide-toggle class="theme-toggle"
           (click)="$event.stopPropagation();"  
           [checked]="isDarkTheme | async" 
           (change)="toggleDarkTheme($event.checked)"></mat-slide-toggle>
       </button>
-    <button mat-menu-item>
+    <a href="https://github.com/Alfred-Sung/material-angular-socketio-express" target="_blank">
+      <button mat-menu-item>
         <mat-icon>code</mat-icon>
         <span>Github repo</span>
       </button>
+    </a>
   </mat-menu>

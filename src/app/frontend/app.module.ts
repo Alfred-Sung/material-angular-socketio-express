@@ -6,9 +6,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 
-import { Navbar } from './frontend/navbar/navbar';
-import { ThemeService } from './frontend/theme.service'
-import { AccountService } from './frontend/account.service'
+import { Navbar } from './navbar/navbar';
+import { ThemeService } from './theme.service'
+import { AccountService } from './account.service'
 
 import { MaterialModule } from './material-module'
 

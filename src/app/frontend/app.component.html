@@ -1,9 +1,9 @@
-<div class="container-fluid fill chat-body" [ngClass]="{'dark-theme': isDarkTheme | async}">
+<div class="container-fluid fill chat-body mat-app-background" [ngClass]="{'dark-theme': isDarkTheme | async}">
   <navbar></navbar>
-      <div class="col-sm-12 chat-history">
+      <div class="col-sm-12 chat-history"  #scrollMe [scrollTop]="scrollMe.scrollHeight">
         <div>{{messageArray}}
           <div *ngFor="let item of messageArray">
-            <mat-card>
+            <mat-card color="accent">
               <strong>{{item.user}} : </strong> {{item.message}}
             </mat-card>
           </div>

@@ -1,3 +1,7 @@
+a {
+  text-decoration: none;
+}
+
 .example-spacer {
     flex: 1 1 auto;
   }
@@ -10,4 +14,8 @@
   float: right;
   right: 0px;
   padding: 10px;
+}
+
+.title {
+  text-align: center;
 }

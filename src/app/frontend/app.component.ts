@@ -1,9 +1,9 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
-import {ChatService} from './frontend/chat.service'
+import {Component, OnDestroy, OnInit, ViewChild, ElementRef} from '@angular/core';
+import {ChatService} from './chat.service'
 import { Observable } from 'rxjs';
 
-import { ThemeService } from './frontend/theme.service';
-import { AccountService } from './frontend/account.service';
+import { ThemeService } from './theme.service';
+import { AccountService } from './account.service';
 
 @Component({
   selector: 'app-root',
@@ -11,6 +11,8 @@ import { AccountService } from './frontend/account.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit, OnDestroy {
+  @ViewChild('scroll') private myScrollContainer!: ElementRef;
+
   title = 'instant-chatting';
 
   room!: String;
