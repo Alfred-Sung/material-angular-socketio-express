@@ -1,0 +1,29 @@
+<mat-toolbar color="accent">
+    <span>{{ title }}</span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" [matMenuTriggerFor]="menu">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+  </mat-toolbar>
+  <mat-menu #menu="matMenu" class="nav-menu">
+    <button mat-menu-item  (click)="$event.stopPropagation();">
+      <form>
+        <mat-icon> account_circle </mat-icon>
+        <mat-form-field>
+          <input matInput #message type="text" placeholder="Username" value="Guest" (change)="changeUsername(message.value)">
+        </mat-form-field>
+      </form>
+      </button>
+      <button mat-menu-item (click)="$event.stopPropagation();"> 
+        <mat-icon [ngClass]="{'dark-theme': isDarkTheme | async}"> {{ themeIcon }} </mat-icon>
+        <span>Theme</span>
+        <mat-slide-toggle class="theme-toggle"
+          (click)="$event.stopPropagation();"  
+          [checked]="isDarkTheme | async" 
+          (change)="toggleDarkTheme($event.checked)"></mat-slide-toggle>
+      </button>
+    <button mat-menu-item>
+        <mat-icon>code</mat-icon>
+        <span>Github repo</span>
+      </button>
+  </mat-menu>

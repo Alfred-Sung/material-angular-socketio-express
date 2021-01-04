@@ -1,0 +1,13 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+::ng-deep .nav-menu {
+  width: 1000px;
+}
+
+::ng-deep .theme-toggle {
+  float: right;
+  right: 0px;
+  padding: 10px;
+}

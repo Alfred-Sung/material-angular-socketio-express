@@ -1,0 +1,40 @@
+.fill { 
+    height: 100%;
+}
+
+.chat-history {
+	height: auto;
+}
+
+.mat-form-field {
+	width: 100%;
+}
+
+.mat-card {
+    clear: both;
+    width: auto;
+	float: left;
+	margin: 5px 0px 5px 0px;
+}
+
+.footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	padding-right: 15px;
+    padding-bottom: 15px;
+	padding-left: 15px;
+	
+	display: flex;
+  }
+
+  .chatbox {
+	order: 0;
+	flex-grow: 1;
+}
+
+.chatbox-button {
+	order: 1;
+	margin-left: 15px;
+}
