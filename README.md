@@ -1,4 +1,4 @@
-# angular-oracle-db-app
+# angular-demo
 Small chat app project utilizing Material Angular, socket IO, and express
 
 ## Frontend
